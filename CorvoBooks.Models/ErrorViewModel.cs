@@ -1,4 +1,4 @@
-namespace CorvoBooksWeb.Models
+namespace CorvoBooks.Models
 {
     public class ErrorViewModel
     {

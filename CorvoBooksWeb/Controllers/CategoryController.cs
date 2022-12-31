@@ -1,5 +1,5 @@
-﻿using CorvoBooksWeb.Data;
-using CorvoBooksWeb.Models;
+﻿using CorvoBooks.DataAccess.Data;
+using CorvoBooks.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
