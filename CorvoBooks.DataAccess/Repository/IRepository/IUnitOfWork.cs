@@ -12,6 +12,8 @@ namespace CorvoBooks.DataAccess.Repository.IRepository
 
     ICoverTypeRepository CoverType { get; }
 
+    IProductRepository Product { get; }
+
     void Save();
   }
 }
