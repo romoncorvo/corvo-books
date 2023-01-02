@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace CorvoBooksWeb.Controllers
+namespace CorvoBooksWeb.Areas.Customer.Controllers
 {
     public class HomeController : Controller
     {
