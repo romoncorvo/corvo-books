@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\digom\Visual-Studio\CorvoBooks\CorvoBooks.Utility\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\digom\Visual-Studio\CorvoBooks\CorvoBooks.Utility\.editorconfig" />
+  </ItemGroup>
+
 </Project>
