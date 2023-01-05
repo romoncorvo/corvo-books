@@ -10,7 +10,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CorvoBooksWeb.Areas.Admin.Controllers
 {
-    public class ProductController : Controller
+  [Area("Admin")]
+  public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _hostEnviroment;

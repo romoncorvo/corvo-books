@@ -14,4 +14,8 @@
     <None Include="C:\Users\digom\Visual-Studio\CorvoBooks\CorvoBooks.Utility\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.12" />
+  </ItemGroup>
+
 </Project>

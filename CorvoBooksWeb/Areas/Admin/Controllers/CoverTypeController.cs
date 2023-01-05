@@ -7,7 +7,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CorvoBooksWeb.Areas.Admin.Controllers
 {
-    public class CoverTypeController : Controller
+  [Area("Admin")]
+  public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
 
