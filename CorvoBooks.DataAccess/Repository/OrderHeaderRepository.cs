@@ -39,6 +39,7 @@ namespace CorvoBooks.DataAccess.Repository
     {
       var orderFromDb = _db.OrderHeaders.FirstOrDefault(x => x.Id == id);
       
+      orderFromDb.PaymentDate = DateTime.Now;
       orderFromDb.SessionId = sessionId;
       orderFromDb.PaymentIntentStatus = PaymentIntentStatus;
     }
