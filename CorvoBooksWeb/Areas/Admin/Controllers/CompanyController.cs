@@ -7,10 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using CorvoBooks.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CorvoBooksWeb.Areas.Admin.Controllers
 {
   [Area("Admin")]
+  [Authorize(Roles = SD.Role_Admin)]
   public class CompanyController : Controller
   {
     private readonly IUnitOfWork _unitOfWork;
