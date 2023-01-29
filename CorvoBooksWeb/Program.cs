@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using CorvoBooks.Utility;
 using Stripe;
+using CorvoBooksWeb;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,11 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProvid
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+builder.Services.AddAuthentication().AddFacebook(options =>
+{
+  options.AppId = APIKeys.FacebookAppId;
+  options.AppSecret = APIKeys.FacebookAppSecret;
+});
 builder.Services.ConfigureApplicationCookie(option =>
 {
   option.LoginPath = $"/Identity/Account/Login";
