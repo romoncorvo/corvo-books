@@ -20,13 +20,13 @@ namespace CorvoBooks.Utility
       emailToSend.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = htmlMessage };
 
       //Send email
-      using (var emailClient = new SmtpClient())
+      /*using (var emailClient = new SmtpClient())
       {
         emailClient.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
         emailClient.Authenticate("corvoadm@gmail.com", "aq!sw2de3");
         emailClient.Send(emailToSend);
         emailClient.Disconnect(true);
-      }
+      }*/
 
       return Task.CompletedTask;
     }

@@ -193,6 +193,7 @@ namespace CorvoBooksWeb.Areas.Customer.Controllers
       }
       _emailSender.SendEmailAsync(orderHeader.ApplicationUser.Email, "New Order - Corvo Books", "<p>New order created</p>");
       List<ShoppingCart> shoppingCarts = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == orderHeader.ApplicationUserId).ToList();
+      HttpContext.Session.Clear();
       _unitOfWork.ShoppingCart.RemoveRange(shoppingCarts);
       _unitOfWork.Save();
 
